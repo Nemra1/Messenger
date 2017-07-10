@@ -2,6 +2,9 @@
 	<img src="./logo.png" width="400" alt="Messenger">
 </div>
 
+[![Code Climate](https://codeclimate.com/github/andrew-sakaylyuk/Messenger/badges/gpa.svg)](https://codeclimate.com/github/andrew-sakaylyuk/Messenger)
+[![Issue Count](https://codeclimate.com/github/andrew-sakaylyuk/Messenger/badges/issue_count.svg)](https://codeclimate.com/github/andrew-sakaylyuk/Messenger)
+
 ## Technologies:
 - Angular (4.2.5)
 - Angular/Material (2.0.0-beta.8)
@@ -72,7 +75,7 @@ Server API:
 |GET /api/friends/areFriends?userId=\{userId\}&friendId=\{friendId\}|Check if two users are friends|None|true/false|
 |GET /api/friends/friendshipRequestAlreadyExists?senderId=\{senderId\}&receiverId=\{receiverId\}|Check if friendship request already exists|None|true/false|
 
-##### This service uses SignalR technology. The main functionality in MessageHub is:
+##### MessageHub's functionality:
 |Method signature (Server) |Description            |Callback (Client)   |Callback invocation  |
 |:-------------------------|:----------------------|:-------------------|:--------------------|
 |void SendMessage(int userId, string text)|Send message|OnSendMessage([JSON with Id, DateTime, Text, FirstName, SenderId, New], [JSON (number of pages)])|All this user and specified user's online clients| 
